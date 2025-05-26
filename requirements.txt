@@ -3,7 +3,7 @@
 # YouTube downloading
 pytubefix>=6.0.0
 
-# Local Whisper transcription
+# Whisper transcription
 openai-whisper>=20231117
 
 # Semantic search
