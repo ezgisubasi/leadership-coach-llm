@@ -29,7 +29,6 @@ class SemanticSearchService:
         print("Embedding service initialized!")
     
     def create_embeddings(self, batch_size: int = 12):
-        """Create embeddings from transcript data and store in vector database."""
         if not os.path.exists(self.transcripts_json):
             print(f"Transcript file not found: {self.transcripts_json}")
             return
@@ -37,7 +36,11 @@ class SemanticSearchService:
         with open(self.transcripts_json, 'r', encoding='utf-8') as f:
             videos = json.load(f)
         
+        print(f"DEBUG: Total videos loaded: {len(videos)}")  # ADD THIS
+        
         valid_videos = [v for v in videos if v.get("video_text", "").strip()]
+        
+        print(f"DEBUG: Valid videos after filtering: {len(valid_videos)}")  # ADD THIS
         
         if not valid_videos:
             print("No valid transcripts found!")
@@ -46,6 +49,9 @@ class SemanticSearchService:
         print(f"Processing {len(valid_videos)} videos with transcripts...")
         
         video_texts = [video["video_text"] for video in valid_videos]
+        print(f"DEBUG: Texts extracted: {len(video_texts)}")  # ADD THIS
+    
+    # ... rest of the code
         
         print("Generating embeddings...")
         embeddings = self.model.encode(video_texts, batch_size=batch_size, show_progress_bar=True)
