@@ -5,6 +5,3 @@ pytubefix>=6.0.0
 
 # Local Whisper transcription
 openai-whisper>=20231117
-
-# Basic utilities
-python-dotenv>=1.0.0
