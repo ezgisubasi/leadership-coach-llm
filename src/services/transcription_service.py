@@ -4,7 +4,7 @@ import os
 import json
 
 class TranscriptionService:
-    def __init__(self, model_size="base", audio_dir="data/audio", json_file="data/transcripts.json", text_dir="data/transcripts"):
+    def __init__(self, model_size="medium", audio_dir="data/audio", json_file="data/transcripts.json", text_dir="data/transcripts"):
         # Load Whisper model (downloads on first use)
         print(f"Loading Whisper {model_size} model...")
         self.model = whisper.load_model(model_size)
@@ -92,5 +92,5 @@ class TranscriptionService:
 
 if __name__ == "__main__":
     # No API key needed!
-    service = TranscriptionService(model_size="base")
+    service = TranscriptionService(model_size="medium")
     service.transcribe_all_videos()
