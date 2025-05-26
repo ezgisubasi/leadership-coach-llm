@@ -5,3 +5,9 @@ pytubefix>=6.0.0
 
 # Local Whisper transcription
 openai-whisper>=20231117
+
+# Semantic search
+sentence-transformers>=2.2.0
+qdrant-client>=1.7.0
+torch>=1.9.0
+
