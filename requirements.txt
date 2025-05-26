@@ -1,0 +1,10 @@
+# Requirements for YouTube Service and Transcription Service only
+
+# YouTube downloading
+pytubefix>=6.0.0
+
+# Local Whisper transcription
+openai-whisper>=20231117
+
+# Basic utilities
+python-dotenv>=1.0.0
