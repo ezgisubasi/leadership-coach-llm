@@ -172,3 +172,15 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# API Keys and Secrets - NEVER COMMIT THESE!
+*.env
+.env.*
+config.py
+secrets.json
+api_keys.txt
+*.key
+*.pem
+
+# Streamlit secrets
+.streamlit/secrets.toml

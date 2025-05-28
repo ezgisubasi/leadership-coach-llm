@@ -1,4 +1,4 @@
-# Requirements for YouTube Service and Transcription Service only
+# Requirements for Leadership Coach LLM
 
 # YouTube downloading
 pytubefix>=6.0.0
@@ -11,3 +11,16 @@ sentence-transformers>=2.2.0
 qdrant-client>=1.7.0
 torch>=1.9.0
 
+# LLM Integration
+google-generativeai>=0.3.0
+
+# Streamlit for UI
+streamlit>=1.28.0
+
+# Web search capability
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# Text to speech (optional)
+gtts>=2.4.0
+pygame>=2.5.0
